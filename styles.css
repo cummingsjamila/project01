@@ -1,30 +1,87 @@
+@font-face {
+  font-family: Raleway;
+  src: url('fonts/Raleway.ttf');
+}
+
+@font-face {
+  font-family: JosefinSlab;
+  src: url('fonts/JosefinSlab.ttf')
+}
+
+/* @import 'https://fonts.googleapis.com/css?family=Josefin+Slab|Raleway'; */
+
+* {
+  font-family: 'Raleway';
+  color: #ffffff;
+  text-align: center;
+  }
+
 body {
   width: 90%;
   margin: 0 auto;
+  background-color: #f4b63a;
 }
 
-#content {
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'JosefinSlab';
+}
+
+.content {
   overflow: auto;
 }
 
-#nav, #intro, #footer {
-  width: 31.3%;
-  float: left;
+#nav, #intro, #footer, .content {
   margin: 1%;
 }
 
 li {
   display: inline;
-  padding: 0.5em 0;
+  padding: 0.5em;
+}
+
+#footer>p {
+  color: #ffcd6b;
 }
 
 #nav, #footer {
-  background-color: #efefef;
+  background-color: #e09926;
   padding: 0.5em 0;
 }
 
-#intro {
-  height: 10em;
-  margin-bottom: 1em;
-  background-color: #efefef;
+li>a {
+  text-decoration: none;
+  color: #ffcd6b;
+  transition: color 0.2s linear;
+}
+
+li>a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+h1>a {
+  text-shadow: 0px 3px 0 #e09926;
+  font-family: JosefinSlab;
+  text-decoration: none;
+}
+
+::selection {
+  color: #ffcd6b;
+  background-color: #e09926;
+}
+
+.column1, .column2, .column3 {
+  width: 31.3%;
+  float: left;
+  margin: 1%;
+}
+
+.column3 {
+  margin-right: 0%;
+}
+
+.column1of2, .column2of2 {
+    width: 50%;
+    display: block;
+    float: left;
 }
